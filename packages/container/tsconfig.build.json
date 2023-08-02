@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@armscye/core": ["../core/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "references": [
+    {
+      "path": "../core/tsconfig.build.json"
+    }
+  ]
+}

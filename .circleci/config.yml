@@ -1,0 +1,42 @@
+version: 2
+
+aliases:
+  - &restore-cache
+    restore_cache:
+      name: Restore Yarn Package Cache
+      keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+  - &install-deps
+    run:
+      name: Install Dependencies
+      command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+  - &build-packages
+    run:
+      name: Build
+      command: yarn build
+  - &save-cache
+    save_cache:
+      name: Save Yarn Package Cache
+      key: yarn-packages-{{ checksum "yarn.lock" }}
+      paths:
+        - ~/.cache/yarn
+
+jobs:
+  build:
+    working_directory: ~/armscye
+    docker:
+      - image: cimg/node:20.5
+    steps:
+      - checkout
+      - *restore-cache
+      - *install-deps
+      - *save-cache
+      - run:
+          name: Build
+          command: yarn build
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
