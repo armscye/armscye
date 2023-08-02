@@ -29,3 +29,31 @@ or using yarn:
 ```sh
 yarn add @armscye/container --dev
 ```
+
+## Installation (Handler)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/handler
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/handler --dev
+```
+
+## Installation (Middleware)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/middleware
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/middleware --dev
+```
