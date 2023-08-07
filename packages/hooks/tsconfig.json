@@ -2,6 +2,9 @@
   "extends": "../tsconfig.build.json",
   "compilerOptions": {
     "types": ["node"],
+    "paths": {
+      "@armscye/core": ["../core/src"]
+    }
   },
   "files": [],
   "include": [],

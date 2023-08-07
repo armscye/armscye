@@ -13,6 +13,9 @@
     "typescript",
     "types"
   ],
+  "dependencies": {
+    "@armscye/core": "^0.1.0"
+  },
   "homepage": "https://github.com/armscye/armscye#readme",
   "repository": {
     "type": "git",
