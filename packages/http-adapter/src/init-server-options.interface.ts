@@ -1,4 +1,3 @@
-import { RequestOptions } from 'https';
 import { TlsOptions } from 'tls';
 
 export interface InitServerOptions {
@@ -11,5 +10,5 @@ export interface InitServerOptions {
    * The grace period: number of seconds to continue to try to finish
    * outstanding http server I/O before forcibly terminating it.
    */
-  grace: RequestOptions;
+  grace: number;
 }
