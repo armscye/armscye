@@ -1,6 +1,6 @@
 {
-  "name": "@armscye/hooks",
-  "version": "0.2.0",
+  "name": "@armscye/response",
+  "version": "0.1.0",
   "description": "A collection of shared standard TypeScript definitions",
   "author": "Augustus Kamau",
   "license": "MIT",
@@ -13,9 +13,6 @@
     "typescript",
     "types"
   ],
-  "dependencies": {
-    "@armscye/core": "^0.1.0"
-  },
   "homepage": "https://github.com/armscye/armscye#readme",
   "repository": {
     "type": "git",

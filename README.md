@@ -85,3 +85,31 @@ or using yarn:
 ```sh
 yarn add @armscye/middleware --dev
 ```
+
+## Installation (Module)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/module
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/module --dev
+```
+
+## Installation (Response)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/response
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/response --dev
+```

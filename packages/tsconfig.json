@@ -18,6 +18,12 @@
     },
     {
       "path": "./middleware/tsconfig.build.json"
+    },
+    {
+      "path": "./module/tsconfig.build.json"
+    },
+    {
+      "path": "./response/tsconfig.build.json"
     }
   ]
 }
