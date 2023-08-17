@@ -1,3 +1,5 @@
+import { InitServerOptions } from './init-server-options.interface';
+
 export interface HttpAdapter {
   /**
    * Get the http server application instance.
@@ -33,7 +35,7 @@ export interface HttpAdapter {
    * Initialize the http server.
    * @param options the options to apply
    */
-  initHttpServer(options: any): void;
+  initHttpServer(options: InitServerOptions): void;
 
   /**
    * Stops the server from accepting new connections and keeps existing
