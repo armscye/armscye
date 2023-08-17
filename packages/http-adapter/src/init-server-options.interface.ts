@@ -7,7 +7,7 @@ export interface InitServerOptions {
   tls?: TlsOptions;
 
   /**
-   * The grace period: number of seconds to continue to try to finish
+   * The grace period: number of milliseconds to continue to try to finish
    * outstanding http server I/O before forcibly terminating it.
    */
   grace?: number;
