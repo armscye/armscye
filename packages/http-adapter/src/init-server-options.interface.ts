@@ -10,5 +10,5 @@ export interface InitServerOptions {
    * The grace period: number of seconds to continue to try to finish
    * outstanding http server I/O before forcibly terminating it.
    */
-  grace: number;
+  grace?: number;
 }
