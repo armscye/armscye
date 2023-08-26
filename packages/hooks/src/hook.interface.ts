@@ -1,3 +1,8 @@
 import { Type } from '@armscye/core';
 
-export type Hook = Type<any> | InstanceType<any> | Function | string | Symbol;
+export type Hook<T = any> =
+  | Type<T>
+  | InstanceType<Type<T>>
+  | Function
+  | string
+  | Symbol;
