@@ -58,20 +58,6 @@ or using yarn:
 yarn add @armscye/hooks --dev
 ```
 
-## Installation (HTTP Adapter)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/http-adapter
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/http-adapter --dev
-```
-
 ## Installation (Middleware)
 
 Using npm:

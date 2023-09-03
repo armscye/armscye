@@ -14,9 +14,6 @@
       "path": "./hooks/tsconfig.build.json"
     },
     {
-      "path": "./http-adapter/tsconfig.build.json"
-    },
-    {
       "path": "./middleware/tsconfig.build.json"
     },
     {
