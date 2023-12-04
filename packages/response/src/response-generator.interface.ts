@@ -1,7 +1,7 @@
 export interface ResponseGenerator {
   /**
-   * Sends the HTTP response.
-   * 
+   * Sends the composed HTTP response.
+   *
    * @param response the in-flight response object
    * @param body the response payload
    * @param statusCode a 3-digit HTTP status code

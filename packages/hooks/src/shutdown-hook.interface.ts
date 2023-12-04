@@ -5,12 +5,14 @@
 export interface ShutdownHook {
   /**
    * Called before connections close.
+   *
    * @param signal the system signal
    */
   beforeShutdown(signal?: string): any;
 
   /**
    * Called after connections close.
+   *
    * @param signal the system signal
    */
   onShutdown(signal?: string): any;

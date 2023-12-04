@@ -3,7 +3,7 @@
  */
 export interface StartupHook {
   /**
-   * 	Called before listening for connections.
+   * Called before listening for connections.
    */
   onStartup(): any;
 }

@@ -1,3 +1,6 @@
+/**
+ * Describes a logger instance.
+ */
 export interface Log {
   /**
    * Log a message at the DEBUG level.

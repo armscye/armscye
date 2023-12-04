@@ -6,6 +6,7 @@ import { ProviderToken } from './provider-token.interface';
 export interface Container {
   /**
    * Find an entry of the container based on the provided token.
+   *
    * @param token the provider token of the entry to look for
    * @returns an entry from the container if defined
    * @throws Error if no entry was found for the token
@@ -15,6 +16,7 @@ export interface Container {
 
   /**
    * Check if an entry for the given provider token exists.
+   *
    * @param token the provider token of the entry to look for
    * @returns whether an entry for the given provider exists
    */
