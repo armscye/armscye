@@ -58,6 +58,20 @@ or using yarn:
 yarn add @armscye/hooks --dev
 ```
 
+## Installation (Logging)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/logging
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/logging --dev
+```
+
 ## Installation (Middleware)
 
 Using npm:
