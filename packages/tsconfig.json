@@ -14,9 +14,6 @@
       "path": "./logging/tsconfig.build.json"
     },
     {
-      "path": "./middleware/tsconfig.build.json"
-    },
-    {
       "path": "./module/tsconfig.build.json"
     },
     {
