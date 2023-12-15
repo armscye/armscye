@@ -47,5 +47,5 @@ export interface Logger {
    *
    * @param name the name of the logger
    */
-  getLog(name: string): this;
+  getLogger(name: string): this;
 }
