@@ -1,7 +1,7 @@
 /**
  * Describes a logger instance.
  */
-export interface Log {
+export interface Logger {
   /**
    * Log a message at the DEBUG level.
    *
