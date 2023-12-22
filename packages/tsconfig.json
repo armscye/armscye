@@ -8,6 +8,9 @@
       "path": "./container/tsconfig.build.json"
     },
     {
+      "path": "./handler/tsconfig.build.json"
+    },
+    {
       "path": "./hooks/tsconfig.build.json"
     },
     {
