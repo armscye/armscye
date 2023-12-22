@@ -30,6 +30,20 @@ or using yarn:
 yarn add @armscye/container --dev
 ```
 
+## Installation (Handler)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/handler
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/handler --dev
+```
+
 ## Installation (Hooks)
 
 Using npm:
