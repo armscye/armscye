@@ -72,6 +72,20 @@ or using yarn:
 yarn add @armscye/logging --dev
 ```
 
+## Installation (Middleware)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/middleware
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/middleware --dev
+```
+
 ## Installation (Module)
 
 Using npm:
