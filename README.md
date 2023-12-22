@@ -44,20 +44,6 @@ or using yarn:
 yarn add @armscye/hooks --dev
 ```
 
-## Installation (HTTP)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/http
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/http --dev
-```
-
 ## Installation (Logging)
 
 Using npm:
