@@ -2,7 +2,7 @@ import { NoArgument } from '@armscye/core';
 import { ProviderToken } from './provider-token';
 
 /**
- * Configures the `Container` to return an instance of `useClass` for a token.
+ * Configures the `Container` to return a value by instantiating `useClass` class.
  */
 export interface ClassProvider<T = any> {
   /**
