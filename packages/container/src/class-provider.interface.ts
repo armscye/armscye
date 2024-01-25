@@ -14,4 +14,9 @@ export interface ClassProvider<T = any> {
    * Class to instantiate for the `token`.
    */
   useClass: NoArgument<T>;
+
+  /**
+   * Whether the created instance should be cached.
+   */
+  shared?: boolean;
 }

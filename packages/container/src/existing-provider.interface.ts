@@ -13,4 +13,9 @@ export interface ExistingProvider<T = any> {
    * Existing `token` to return.
    */
   useExisting: T;
+
+  /**
+   * Whether the created instance should be cached.
+   */
+  shared?: boolean;
 }

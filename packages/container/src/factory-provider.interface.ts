@@ -15,4 +15,9 @@ export interface FactoryProvider<T = any> {
    * invoked with resolved values of token`s from an instance of the container.
    */
   useFactory: Factory<T>;
+
+  /**
+   * Whether the created instance should be cached.
+   */
+  shared?: boolean;
 }
