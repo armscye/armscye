@@ -1,5 +1,5 @@
-import { Factory } from './factory.interface';
-import { ProviderToken } from './provider-token.interface';
+import { Factory } from './factory';
+import { ProviderToken } from './provider-token';
 
 /**
  * Configures the `Container` to return a value by invoking a `useFactory` function.

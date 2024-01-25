@@ -1,5 +1,5 @@
 import { NoArgument } from '@armscye/core';
-import { ProviderToken } from './provider-token.interface';
+import { ProviderToken } from './provider-token';
 
 /**
  * Configures the `Container` to return an instance of `useClass` for a token.

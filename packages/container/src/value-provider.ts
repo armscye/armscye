@@ -1,4 +1,4 @@
-import { ProviderToken } from './provider-token.interface';
+import { ProviderToken } from './provider-token';
 
 /**
  * Configures the `Container` to return a value for a token.

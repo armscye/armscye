@@ -1,4 +1,4 @@
-import { ProviderToken } from './provider-token.interface';
+import { ProviderToken } from './provider-token';
 
 /**
  * Describes the interface of a container that exposes methods to read its entries.

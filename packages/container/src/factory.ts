@@ -1,4 +1,4 @@
-import { Container } from './container.interface';
+import { Container } from './container';
 
 /**
  * Represents type for a factory. A factory is a function that is able to create an object.
