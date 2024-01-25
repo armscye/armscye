@@ -1,3 +1,3 @@
-export * from './hook-provider.interface';
-export * from './shutdown-hook.interface';
-export * from './startup-hook.interface';
+export * from './hook-provider';
+export * from './shutdown-hook';
+export * from './startup-hook';
