@@ -1,3 +1,3 @@
-export * from './abstract.interface';
-export * from './no-argument.interface';
-export * from './type.interface';
+export * from './abstract';
+export * from './no-argumen';
+export * from './type';
