@@ -11,22 +11,13 @@
       "path": "./express/tsconfig.build.json"
     },
     {
-      "path": "./handler/tsconfig.build.json"
-    },
-    {
       "path": "./hooks/tsconfig.build.json"
     },
     {
       "path": "./logging/tsconfig.build.json"
     },
     {
-      "path": "./middleware/tsconfig.build.json"
-    },
-    {
       "path": "./module/tsconfig.build.json"
-    },
-    {
-      "path": "./response/tsconfig.build.json"
     }
   ]
 }

@@ -44,20 +44,6 @@ or using yarn:
 yarn add @armscye/express --dev
 ```
 
-## Installation (Handler)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/handler
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/handler --dev
-```
-
 ## Installation (Hooks)
 
 Using npm:
@@ -86,20 +72,6 @@ or using yarn:
 yarn add @armscye/logging --dev
 ```
 
-## Installation (Middleware)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/middleware
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/middleware --dev
-```
-
 ## Installation (Module)
 
 Using npm:
@@ -112,18 +84,4 @@ or using yarn:
 
 ```sh
 yarn add @armscye/module --dev
-```
-
-## Installation (Response)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/response
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/response --dev
 ```
