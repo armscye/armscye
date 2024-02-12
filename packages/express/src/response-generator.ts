@@ -1,3 +1,6 @@
+/**
+ * Describes the interface for composing and sending HTTP responses.
+ */
 export interface ResponseGenerator {
   /**
    * Sends the composed HTTP response.
