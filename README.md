@@ -30,6 +30,20 @@ or using yarn:
 yarn add @armscye/container --dev
 ```
 
+## Installation (Express)
+
+Using npm:
+
+```sh
+npm install --save-dev @armscye/express
+```
+
+or using yarn:
+
+```sh
+yarn add @armscye/express --dev
+```
+
 ## Installation (Handler)
 
 Using npm:
