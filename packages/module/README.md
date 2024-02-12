@@ -15,3 +15,22 @@ or using yarn:
 ```sh
 yarn add @armscye/module --dev
 ```
+
+## Interfaces
+
+### Module
+
+```ts
+export interface Module {
+  /**
+   * Register configurations.
+   */
+  register(): any;
+}
+```
+
+## License
+
+This project is licensed under the **MIT license**.
+
+See [LICENSE](LICENSE) for more information.
