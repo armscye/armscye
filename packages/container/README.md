@@ -16,157 +16,132 @@ or using yarn:
 yarn add @armscye/container --dev
 ```
 
-## Interfaces
+## Reference
 
-### Class Provider
+### ClassProvider `Interface`
+
+Configures the `Container` to return an instance of `useClass` for a token.
 
 ```ts
-/**
- * Configures the `Container` to return a value by instantiating `useClass` class.
- */
-export interface ClassProvider<T = any> {
-  /**
-   * Provider token.
-   */
+interface ClassProvider<T = any> {
   provide: ProviderToken;
 
-  /**
-   * Class to instantiate for the `token`.
-   */
   useClass: NoArgument<T>;
 
-  /**
-   * Whether the created instance should be cached.
-   */
   shared?: boolean;
 }
 ```
 
-### Container
+**Properties**
+
+| Property                  | Description                                    |
+| ------------------------- | ---------------------------------------------- |
+| provide: ProviderToken    | A provider token.                              |
+| useClass: NoArgument<any> | A class to instantiate for the `token`         |
+| shared?: boolean          | Whether the created instance should be cached. |
+
+### Container `Interface`
+
+Describes the interface of a container that exposes methods to read its entries.
 
 ```ts
-/**
- * Describes the interface of a container that exposes methods to read its entries.
- */
-export interface Container {
-  /**
-   * Find an entry of the container based on the provided token.
-   *
-   * @param token the provider token of the entry to look for
-   * @returns an entry from the container if defined
-   * @throws Error if no entry was found for the token
-   * @throws Error if error while retrieving the entry
-   */
+interface Container {
   get<T>(token: ProviderToken): T;
 
-  /**
-   * Check if an entry for the given provider token exists.
-   *
-   * @param token the provider token of the entry to look for
-   * @returns whether an entry for the given provider exists
-   */
   has(token: ProviderToken): boolean;
 }
 ```
 
-### Existing Provider
+### ExistingProvider `Interface`
+
+Configures the `Container` to return a value of another `useExisting` token.
 
 ```ts
-/**
- * Configures the `Container` to return a value of another `useExisting` token.
- */
-export interface ExistingProvider<T = any> {
-  /**
-   * Provider token.
-   */
+interface ExistingProvider<T = any> {
   provide: ProviderToken;
 
-  /**
-   * Existing `token` to return.
-   */
   useExisting: T;
 
-  /**
-   * Whether the created instance should be cached.
-   */
   shared?: boolean;
 }
 ```
 
-### Factory Provider
+**Properties**
+
+| Property                   | Description                                    |
+| -------------------------- | ---------------------------------------------- |
+| provide: ProviderToken     | A provider token.                              |
+| useExisting: ProviderToken | Existing `token` to return.                    |
+| shared?: boolean           | Whether the created instance should be cached. |
+
+### FactoryProvider `Interface`
+
+Configures the `Container` to return a value by invoking a `useFactory` function.
 
 ```ts
-/**
- * Configures the `Container` to return a value by invoking a `useFactory` function.
- */
-export interface FactoryProvider<T = any> {
-  /**
-   * Provider token.
-   */
+interface FactoryProvider<T = any> {
   provide: ProviderToken;
 
-  /**
-   * A function to invoke to create an instance for this `token`. The function is
-   * invoked with resolved values of token`s from an instance of the container.
-   */
   useFactory: Factory<T>;
 
-  /**
-   * Whether the created instance should be cached.
-   */
   shared?: boolean;
 }
 ```
 
-### Value Provider
+**Properties**
+
+| Property               | Description                                                       |
+| ---------------------- | ----------------------------------------------------------------- |
+| provide: ProviderToken | A provider token.                                                 |
+| useFactory: Factory    | A factory function to invoke to create an object for the `token`. |
+| shared?: boolean       | Whether the created instance should be cached.                    |
+
+### Factory `Type`
+
+A function to invoke to create an object. The function is invoked with an instance of the container in order to access required dependencies.
 
 ```ts
-/**
- * Configures the `Container` to return a value for a token.
- */
-export interface ValueProvider<T = any> {
-  /**
-   * Provider token.
-   */
-  provide: ProviderToken;
-
-  /**
-   * The value to inject.
-   */
-  useValue: T;
-}
+type Factory<T = any> = (container: Container) => T;
 ```
 
-## Types
+### ProviderToken `Type`
 
-### Factory
+Token that can be used to retrieve an instance from a container.
 
 ```ts
-/**
- * Represents type for a factory. A factory is a function that is able to create an object.
- * It is provided with an instance of the container in order to access required dependencies.
- */
-export type Factory<T = any> = (container: Container) => T;
+type ProviderToken = string | symbol;
 ```
 
-### Provider Token
+### Provider `Type`
+
+Describes how the `Container` should be configured.
 
 ```ts
-/**
- * Token that can be used to retrieve an instance from a container.
- */
-export type ProviderToken = string | symbol;
-```
-
-### Provider
-
-```ts
-export type Provider<T = any> =
+type Provider<T = any> =
   | ValueProvider<T>
   | ClassProvider<T>
   | FactoryProvider<T>
   | ExistingProvider<T>;
 ```
+
+### ValueProvider `Interface`
+
+Configures the `Container` to return a value for a token.
+
+```ts
+interface ValueProvider<T = any> {
+  provide: ProviderToken;
+
+  useValue: T;
+}
+```
+
+**Properties**
+
+| Property               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| provide: ProviderToken | A provider token.                                           |
+| useValue: any          | The actual value that will be provided for the given token. |
 
 ## License
 
