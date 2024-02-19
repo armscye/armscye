@@ -34,11 +34,11 @@ interface ClassProvider<T = any> {
 
 **Properties**
 
-| Property                  | Description                                    |
-| ------------------------- | ---------------------------------------------- |
-| provide: ProviderToken    | A provider token.                              |
-| useClass: NoArgument<any> | A class to instantiate for the `token`         |
-| shared?: boolean          | Whether the created instance should be cached. |
+| Property                  | Description                                |
+| ------------------------- | ------------------------------------------ |
+| provide: ProviderToken    | A provider token.                          |
+| useClass: NoArgument<any> | A class to instantiate for the `token`.    |
+| shared?: boolean          | When true, the created instance is cached. |
 
 ### Container `Interface`
 
