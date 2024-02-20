@@ -1,6 +1,6 @@
 # @armscye/hooks
 
-> A collection of shared standard TypeScript definitions.
+> A collection of shared standard TypeScript definitions (@hooks).
 
 ## Installation
 
