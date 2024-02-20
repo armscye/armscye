@@ -28,13 +28,13 @@ interface ShutdownHook {
 }
 ```
 
-The `onShutdown` method is called when an application receives a system signal indicating it's time to gracefully shut down. Common signals include `SIGTERM` (termination request) and `SIGINT` (interrupt).
+The `onShutdown` method is called when an application receives a system signal indicating it's time to gracefully shutdown. Common signals include `SIGTERM` (termination request) and `SIGINT` (interrupt).
 
 The optional `signal` parameter might be provided, revealing the specific signal received.
 
 **Usage notes**
 
-Here's a basic example demonstrating how to use `ShutdownHook` to close a database connection before shutdown:
+Here's a basic example demonstrating how to use `ShutdownHook` to close a database connection:
 
 ```ts
 class MyShutdownHook implements ShutdownHook {
@@ -47,8 +47,8 @@ class MyShutdownHook implements ShutdownHook {
   }
 }
 
-// Register the shutdown hook
-server.registerStartupHook(new MyShutdownHook())
+// Register the shutdown hook with the application
+app.registerHook(new MyShutdownHook())
 ```
 
 ### StartupHook `Interface`
@@ -65,7 +65,7 @@ The `onStartup` method is called before the application begins listening for inc
 
 **Usage notes**
 
-Here's a basic example demonstrating how to use a StartupHook to connect to a database:
+Here's a basic example demonstrating how to use a `StartupHook` to connect to a database:
 
 ```ts
 class MyStartupHook implements StartupHook {
@@ -76,13 +76,13 @@ class MyStartupHook implements StartupHook {
   }
 }
 
-// Register the startup hook
-server.registerStartupHook(new MyStartupHook());
+// Register the startup hook with the application
+app.registerHook(new MyStartupHook());
 ```
 
 ### HookProvider `Type`
 
-Describes how hooks are provided in an application.
+Describes how hooks should be provided.
 
 ```ts
 type HookProvider<T = any> = string | symbol | object | Type<T> | Function;
