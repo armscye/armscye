@@ -16,38 +16,34 @@ or using yarn:
 yarn add @armscye/core --dev
 ```
 
-## Interfaces
+## Reference
 
-### Abstract
+### Abstract `Interface`
+
+Represents an abstract class `T`, if applied to a concrete class it would stop being instantiable.
 
 ```ts
-/**
- * Represents an abstract class `T`, if applied to a concrete class it would stop being
- * instantiable.
- */
-export interface Abstract<T = any> extends Function {
+interface Abstract<T = any> extends Function {
   prototype: T;
 }
 ```
 
-### No Argument
+### NoArgument `Interface`
+
+Represents an instantiable class `T` with a default (no-argument) constructor.
 
 ```ts
-/**
- * Represents an instantiable class `T` with a default (no-argument) constructor.
- */
-export interface NoArgument<T = any> extends Function {
+interface NoArgument<T = any> extends Function {
   new (): T;
 }
 ```
 
-### Type
+### Type `Interface`
+
+Represents an instantiable class `T` with constructor parameters.
 
 ```ts
-/**
- * Represents an instantiable class `T` with constructor parameters.
- */
-export interface Type<T = any> extends Function {
+interface Type<T = any> extends Function {
   new (...args: any[]): T;
 }
 ```
