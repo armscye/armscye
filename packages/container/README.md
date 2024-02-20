@@ -98,11 +98,11 @@ interface ExistingProvider<T = any> {
 
 **Properties**
 
-| Property                   | Description                                    |
-| -------------------------- | ---------------------------------------------- |
-| provide: ProviderToken     | A provider token.                              |
-| useExisting: ProviderToken | Existing `token` to return.                    |
-| shared?: boolean           | Whether the created instance should be cached. |
+| Property                   | Description                                |
+| -------------------------- | ------------------------------------------ |
+| provide: ProviderToken     | A provider token.                          |
+| useExisting: ProviderToken | Existing `token` to return.                |
+| shared?: boolean           | When true, the created instance is cached. |
 
 ### FactoryProvider `Interface`
 
@@ -124,7 +124,7 @@ interface FactoryProvider<T = any> {
 | ---------------------- | ----------------------------------------------------------------- |
 | provide: ProviderToken | A provider token.                                                 |
 | useFactory: Factory    | A factory function to invoke to create an object for the `token`. |
-| shared?: boolean       | Whether the created instance should be cached.                    |
+| shared?: boolean       | When true, the created instance is cached.                        |
 
 ### Factory `Type`
 
