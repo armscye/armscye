@@ -16,62 +16,58 @@ or using yarn:
 yarn add @armscye/logging --dev
 ```
 
-## Interfaces
+## Reference
 
 ### Logger
 
+Describes a common interface for logging.
+
 ```ts
-/**
- * Describes a logger instance.
- */
-export interface Logger {
-  /**
-   * Log a message at the DEBUG level.
-   *
-   * @param msg the message to be logged
-   * @param args an array of arguments
-   */
+interface Logger {
   debug(msg: any, ...args: unknown[]): any;
 
-  /**
-   * Log a message at the INFO level.
-   *
-   * @param msg the message to be logged.
-   * @param args an array of arguments
-   */
   info(msg: any, ...args: unknown[]): any;
 
-  /**
-   * Log a message at the WARNING level.
-   *
-   * @param msg the message to be logged
-   * @param args an array of arguments
-   */
   warning(msg: any, ...args: unknown[]): any;
 
-  /**
-   * Log a message at the ERROR level.
-   *
-   * @param msg the message to be logged
-   * @param args an array of arguments
-   */
   error(msg: any, ...args: unknown[]): any;
 
-  /**
-   * Log a message at the CRITICAL level.
-   *
-   * @param msg the message to be logged
-   * @param args an array of arguments
-   */
   critical(msg: any, ...args: unknown[]): any;
 
-  /**
-   * Return a named logger.
-   *
-   * @param name the name of the logger
-   */
   getLogger(name: string): this;
 }
+```
+
+The interface offers various methods for logging messages at different levels of severity:
+
+- `debug`: For detailed information about internal operations (use sparingly).
+- `info`: For regular informational messages about the application's activities.
+- `warning`: For potential problems that might not cause immediate failures.
+- `error`: For errors that have occurred but the application can continue running.
+- `critical`: For severe errors that prevent the application from functioning properly.
+
+Each method takes the message, usually a string, as the first argument and allows additional arguments for providing context (variables, objects, etc.).
+
+The `getLogger` method facilitates creation of loggers with specific names. This helps organize and filter log messages based on their origin or functionality.
+
+**Usage notes**
+
+Here's an example demonstrating how to use the `Logger` interface:
+
+```ts
+class MyLogger implements Logger {}
+
+const logger = new MyLogger().getLogger('my-service');
+
+logger.info('Starting service processing...');
+
+try {
+  // ... service logic
+} catch (error) {
+  logger.error('An error occurred:', error);
+}
+
+logger.info('Service processing completed.');
 ```
 
 ## License

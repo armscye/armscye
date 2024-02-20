@@ -1,5 +1,5 @@
 /**
- * Describes a logger instance.
+ * Describes a common interface for logging.
  */
 export interface Logger {
   /**
