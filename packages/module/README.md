@@ -18,7 +18,7 @@ yarn add @armscye/module --dev
 
 ## Reference
 
-### Module
+### Module `Interface`
 
 Provides a standardized way to register configurations and integrate with the larger system.
 
