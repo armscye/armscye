@@ -1,6 +1,6 @@
 # @armscye/container
 
-> A collection of shared standard TypeScript definitions.
+> A collection of shared standard TypeScript definitions (@container).
 
 ## Installation
 

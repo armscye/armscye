@@ -1,7 +1,7 @@
 {
   "name": "@armscye/container",
   "version": "0.3.0",
-  "description": "A collection of shared standard TypeScript definitions",
+  "description": "A collection of shared standard TypeScript definitions (@container)",
   "author": "Augustus Kamau",
   "license": "MIT",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,8 @@
   "keywords": [
     "armscye",
     "typescript",
-    "types"
+    "types",
+    "container"
   ],
   "dependencies": {
     "@armscye/core": "^0.2.0"
