@@ -30,9 +30,9 @@ interface NotchHandler<TRequest = any, TResponse = any> {
 
 The `handle` method is the heart of the `NotchHandler`. It takes three arguments:
 
-- `req`: The incoming request object containing information like headers, body, and URL parameters.
-- `res`: The response object used to send data back to the client.
-- `next`: An optional callback function that allows passing control to another handler if needed. This is often used for middleware or chaining requests.
+- `req`: This represents the incoming HTTP request.
+- `res`: This represents the response object that will be sent back to the client.
+- `next` (optional): Allows the handler to delegate further processing to the next middleware in the chain if necessary.
 
 **Usage notes**
 
@@ -49,13 +49,12 @@ class MyHandler implements NotchHandler {
     // Perform any necessary logic...
 
     // Return a response:
-    return res.status(200).json({ message: "Hello from the handler!" });
+    return res.status(200).json({ message: 'Hello from the handler!' });
   }
 }
 
 // Usage:
 const myHandler = new MyHandler();
-const app = /* server-side application */;
 app.get(myHandler.handle);
 ```
 
@@ -72,9 +71,9 @@ interface NotchMiddleware<TRequest = any, TResponse = any> {
 
 The `process` method in the `NotchMiddleware` is responsible for handling incoming server requests and participating in the overall request-response cycle. The method takes three main arguments:
 
-- `req`: This represents the incoming HTTP request object, containing details like method, URL, headers, and body.
-- `res`: This represents the HTTP response object that will be sent back to the client.
-- `next` (optional): This is a function that allows the middleware to pass control to the next middleware in the chain or the final request handler.
+- `req`: This represents the incoming HTTP request.
+- `res`: This represents the response object that will be sent back to the client.
+- `next` (optional): Allows passing control to the next middleware in a chain or to the final request handler.
 
 Some middleware implementations might also handle errors. They receive an additional `err` argument before the `req`, `res`, and `next` arguments. This allows them to:
 
@@ -98,7 +97,7 @@ class AuthMiddleware implements NotchMiddleware {
       next();
     } else {
       // Unauthorized access, send error response
-      res.status(401).json({ message: "Unauthorized" });
+      res.status(401).json({ message: 'Unauthorized' });
     }
   }
 }
@@ -106,7 +105,6 @@ class AuthMiddleware implements NotchMiddleware {
 // Usage:
 
 const authMiddleware = new AuthMiddleware();
-const app = /* server-side application */;
 app.use(authMiddleware.process);
 
 // This middleware will be executed before any request handler.
