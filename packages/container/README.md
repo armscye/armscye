@@ -54,7 +54,7 @@ interface Container {
 
 **Methods**
 
-    get()
+    get(token: ProviderToken): T
 
 Retrieves an entry from the container based on its provider token.
 
@@ -70,7 +70,7 @@ _Throws_
 
 `Error` if the entry doesn't exist or an error occurs during retrieval.
 
-    has()
+    has(token: ProviderToken): boolean
 
 Checks whether an entry for a specific provider token exists in the container.
 
