@@ -1,6 +1,6 @@
 # @armscye/core
 
-> A collection of shared standard TypeScript definitions.
+> A collection of shared standard TypeScript definitions (@core).
 
 ## Installation
 
