@@ -40,11 +40,11 @@ interface Logger {
 
 The interface offers various methods for logging messages at different levels of severity:
 
-- `debug`: For detailed information about internal operations (use sparingly).
-- `info`: For regular informational messages about the application's activities.
-- `warning`: For potential problems that might not cause immediate failures.
-- `error`: For errors that have occurred but the application can continue running.
-- `critical`: For severe errors that prevent the application from functioning properly.
+- `debug`: Log a message at the DEBUG level.
+- `info`: Log a message at the INFO level.
+- `warning`: Log a message at the WARNING level.
+- `error`: Log a message at the ERROR level.
+- `critical`: Log a message at the CRITICAL level.
 
 Each method takes the message, usually a string, as the first argument and allows additional arguments for providing context (variables, objects, etc.).
 
