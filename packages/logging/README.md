@@ -18,7 +18,7 @@ yarn add @armscye/logging --dev
 
 ## Reference
 
-### Logger
+### Logger `Interface`
 
 Describes a common interface for logging.
 
