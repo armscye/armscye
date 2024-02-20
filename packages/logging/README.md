@@ -1,6 +1,6 @@
 # @armscye/logging
 
-> A collection of shared standard TypeScript definitions.
+> A collection of shared standard TypeScript definitions (@logging).
 
 ## Installation
 
