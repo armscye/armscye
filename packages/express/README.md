@@ -31,8 +31,8 @@ interface NotchHandler<TRequest = any, TResponse = any> {
 The `handle` method is the heart of the `NotchHandler`. It takes three arguments:
 
 - `req`: The incoming request object containing information like headers, body, and URL parameters.
-- `res`: The response object used to send data back to the client. You'll typically set properties like status code, headers, and body on this object.
-- `next`: An optional callback function that allows you to pass control to another handler if needed. This is often used for middleware or chaining requests.
+- `res`: The response object used to send data back to the client.
+- `next`: An optional callback function that allows passing control to another handler if needed. This is often used for middleware or chaining requests.
 
 **Usage notes**
 
@@ -55,7 +55,7 @@ class MyHandler implements NotchHandler {
 
 // Usage:
 const myHandler = new MyHandler();
-const app = /* your server-side application */;
+const app = /* server-side application */;
 app.get(myHandler.handle);
 ```
 
@@ -73,7 +73,7 @@ interface NotchMiddleware<TRequest = any, TResponse = any> {
 The `process` method in the `NotchMiddleware` is responsible for handling incoming server requests and participating in the overall request-response cycle. The method takes three main arguments:
 
 - `req`: This represents the incoming HTTP request object, containing details like method, URL, headers, and body.
-- `res`: This represents the HTTP response object that will be sent back to the client. You can use methods like status and json to set the response status code and body.
+- `res`: This represents the HTTP response object that will be sent back to the client.
 - `next` (optional): This is a function that allows the middleware to pass control to the next middleware in the chain or the final request handler.
 
 Some middleware implementations might also handle errors. They receive an additional `err` argument before the `req`, `res`, and `next` arguments. This allows them to:
@@ -92,7 +92,7 @@ class AuthMiddleware implements NotchMiddleware {
     // Extract authentication token from request headers
     const token = req.headers.authorization;
 
-    // Validate token (replace with your actual validation logic)
+    // Validate token (replace with actual validation logic)
     if (isValidToken(token)) {
       // User is authenticated, proceed to the next middleware or handler
       next();
@@ -106,7 +106,7 @@ class AuthMiddleware implements NotchMiddleware {
 // Usage:
 
 const authMiddleware = new AuthMiddleware();
-const app = /* your server-side application */;
+const app = /* server-side application */;
 app.use(authMiddleware.process);
 
 // This middleware will be executed before any request handler.
@@ -128,7 +128,7 @@ The `reply` method within the `ResponseGenerator` is responsible for the final s
 - `body`: The actual content of the response, which can be:
   - A string representing text or HTML.
   - An object that will be serialized to JSON (e.g., for sending data).
-  - Any other data type supported by your framework.
+  - Any other supported data type.
 - `statusCode (optional)`: The HTTP status code indicating the outcome of the request (e.g., 200 for success, 404 for not found). If not provided, a default code (often 200) might be used.
 
 **Usage notes**
