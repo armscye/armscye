@@ -16,50 +16,76 @@ or using yarn:
 yarn add @armscye/hooks --dev
 ```
 
-## Interfaces
+## Reference
 
-### Shutdown Hook
+### ShutdownHook `Interface`
+
+Interface defining methods to respond to system signals (when application gets shutdown by, e.g., `SIGTERM`).
 
 ```ts
-/**
- * Interface defining methods to respond to system signals (when application gets
- * shutdown by, e.g., SIGTERM)
- */
-export interface ShutdownHook {
-  /**
-   * Called after connections close.
-   *
-   * @param signal the system signal
-   */
+interface ShutdownHook {
   onShutdown(signal?: string): any;
 }
 ```
 
-### Startup Hook
+The `onShutdown` method is called when an application receives a system signal indicating it's time to gracefully shut down. Common signals include `SIGTERM` (termination request) and `SIGINT` (interrupt).
+
+The optional `signal` parameter might be provided, revealing the specific signal received.
+
+**Usage notes**
+
+Here's a basic example demonstrating how to use `ShutdownHook` to close a database connection before shutdown:
 
 ```ts
-/**
- * Interface defining method called during the application startup.
- */
-export interface StartupHook {
-  /**
-   * Called before listening for connections.
-   */
+class MyShutdownHook implements ShutdownHook {
+  onShutdown(signal?: string) {
+    // Access and close database connection
+    const db = /* get database connection */;
+    db.close()
+      .then(() => console.log("Database connection closed"))
+      .catch(error => console.error("Error closing database:", error));
+  }
+}
+
+// Register the shutdown hook
+server.registerStartupHook(new MyShutdownHook())
+```
+
+### StartupHook `Interface`
+
+Interface defining method called during the application startup.
+
+```ts
+interface StartupHook {
   onStartup(): any;
 }
 ```
 
-## Types
+The `onStartup` method is called before the application begins listening for incoming connections.
 
-### Hook Provider
+**Usage notes**
+
+Here's a basic example demonstrating how to use a StartupHook to connect to a database:
 
 ```ts
-export type HookProvider<T = any> =
-  | string
-  | symbol
-  | object
-  | Type<T>
-  | Function;
+class MyStartupHook implements StartupHook {
+  onStartup() {
+    // Connect to the database
+    database.connect();
+    console.log('Database connection established.');
+  }
+}
+
+// Register the startup hook
+server.registerStartupHook(new MyStartupHook());
+```
+
+### HookProvider `Type`
+
+Describes how hooks are provided in an application.
+
+```ts
+type HookProvider<T = any> = string | symbol | object | Type<T> | Function;
 ```
 
 ## License
