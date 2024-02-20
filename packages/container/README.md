@@ -52,6 +52,36 @@ interface Container {
 }
 ```
 
+**Methods**
+
+    get()
+
+Retrieves an entry from the container based on its provider token.
+
+_Parameters_
+
+- `token`: The unique identifier of the entry you want to retrieve.
+
+_Returns_
+
+The entry associated with the provided token, if found.
+
+_Throws_
+
+`Error` if the entry doesn't exist or an error occurs during retrieval.
+
+    has()
+
+Checks whether an entry for a specific provider token exists in the container.
+
+_Parameters_
+
+`token`: The unique identifier of the entry you want to check for.
+
+_Returns_
+
+`true` if an entry for the provided token exists, `false` otherwise.
+
 ### ExistingProvider `Interface`
 
 Configures the `Container` to return a value of another `useExisting` token.
