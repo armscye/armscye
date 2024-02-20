@@ -103,11 +103,8 @@ class AuthMiddleware implements NotchMiddleware {
 }
 
 // Usage:
-
 const authMiddleware = new AuthMiddleware();
 app.use(authMiddleware.process);
-
-// This middleware will be executed before any request handler.
 ```
 
 ### Response Generator `Interface`
