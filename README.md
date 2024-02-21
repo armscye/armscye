@@ -2,86 +2,17 @@
 
 > A collection of shared standard TypeScript definitions.
 
-## Installation (Core)
+## :package: Packages
 
-Using npm:
+- [core](./packages/core)
+- [container](./packages/container)
+- [express](./packages/express)
+- [hooks](./packages/hooks)
+- [logging](./packages/logging)
+- [module](./packages/module)
 
-```sh
-npm install --save-dev @armscye/core
-```
+## :memo: License
 
-or using yarn:
+This project is licensed under the **MIT license**.
 
-```sh
-yarn add @armscye/core --dev
-```
-
-## Installation (Container)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/container
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/container --dev
-```
-
-## Installation (Express)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/express
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/express --dev
-```
-
-## Installation (Hooks)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/hooks
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/hooks --dev
-```
-
-## Installation (Logging)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/logging
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/logging --dev
-```
-
-## Installation (Module)
-
-Using npm:
-
-```sh
-npm install --save-dev @armscye/module
-```
-
-or using yarn:
-
-```sh
-yarn add @armscye/module --dev
-```
+See [LICENSE](LICENSE) for more information.
