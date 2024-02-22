@@ -34,11 +34,11 @@ interface ClassProvider<T = any> {
 
 **Properties**
 
-| Property                | Description                                |
-| ----------------------- | ------------------------------------------ |
-| provide: ProviderToken  | A provider token.                          |
-| useClass: NoArgument<T> | A class to instantiate for the `token`.    |
-| shared?: boolean        | When true, the created instance is cached. |
+| Property                  | Description                                |
+| ------------------------- | ------------------------------------------ |
+| provide: `ProviderToken`  | A provider token.                          |
+| useClass: `NoArgument<T>` | A class to instantiate for the `token`.    |
+| shared?: boolean          | When true, the created instance is cached. |
 
 ### Container `Interface`
 
@@ -98,11 +98,11 @@ interface ExistingProvider<T = any> {
 
 **Properties**
 
-| Property                   | Description                                |
-| -------------------------- | ------------------------------------------ |
-| provide: ProviderToken     | A provider token.                          |
-| useExisting: ProviderToken | Existing `token` to return.                |
-| shared?: boolean           | When true, the created instance is cached. |
+| Property                     | Description                                |
+| ---------------------------- | ------------------------------------------ |
+| provide: `ProviderToken`     | A provider token.                          |
+| useExisting: `ProviderToken` | Existing `token` to return.                |
+| shared?: boolean             | When true, the created instance is cached. |
 
 ### FactoryProvider `Interface`
 
@@ -120,11 +120,11 @@ interface FactoryProvider<T = any> {
 
 **Properties**
 
-| Property               | Description                                                       |
-| ---------------------- | ----------------------------------------------------------------- |
-| provide: ProviderToken | A provider token.                                                 |
-| useFactory: Factory<T> | A factory function to invoke to create an object for the `token`. |
-| shared?: boolean       | When true, the created instance is cached.                        |
+| Property                 | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| provide: `ProviderToken` | A provider token.                                                 |
+| useFactory: `Factory<T>` | A factory function to invoke to create an object for the `token`. |
+| shared?: boolean         | When true, the created instance is cached.                        |
 
 ### Factory `Type`
 
@@ -168,10 +168,10 @@ interface ValueProvider<T = any> {
 
 **Properties**
 
-| Property               | Description                                                 |
-| ---------------------- | ----------------------------------------------------------- |
-| provide: ProviderToken | A provider token.                                           |
-| useValue: T            | The actual value that will be provided for the given token. |
+| Property                 | Description                                                 |
+| ------------------------ | ----------------------------------------------------------- |
+| provide: `ProviderToken` | A provider token.                                           |
+| useValue: T              | The actual value that will be provided for the given token. |
 
 ## License
 
