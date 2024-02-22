@@ -36,7 +36,7 @@ The `handle` method is the heart of the `NotchHandler`. It takes three arguments
 
 **Usage notes**
 
-Here's a basic example demonstrating how to use a `NotchHandler` to handle a GET request and return a simple response:
+Here's a basic example demonstrating how to use a `NotchHandler` to handle a HTTP request and return a simple response:
 
 ```ts
 class MyHandler implements NotchHandler {
@@ -52,10 +52,6 @@ class MyHandler implements NotchHandler {
     return res.status(200).json({ message: 'Hello from the handler!' });
   }
 }
-
-// Usage:
-const myHandler = new MyHandler();
-app.get(myHandler.handle);
 ```
 
 ### NotchMiddleware `Interface`
@@ -101,10 +97,6 @@ class AuthMiddleware implements NotchMiddleware {
     }
   }
 }
-
-// Usage:
-const authMiddleware = new AuthMiddleware();
-app.use(authMiddleware.process);
 ```
 
 ### Response Generator `Interface`
@@ -119,12 +111,12 @@ interface ResponseGenerator {
 
 The `reply` method within the `ResponseGenerator` is responsible for the final step in crafting and delivering an HTTP response to the client. The method takes three arguments:
 
-- `response`: An object representing the in-flight response. It might contain properties like headers, cookies, or connection information.
+- `response`: An object representing the in-flight response.
 - `body`: The actual content of the response, which can be:
   - A string representing text or HTML.
   - An object that will be serialized to JSON (e.g., for sending data).
   - Any other supported data type.
-- `statusCode (optional)`: The HTTP status code indicating the outcome of the request (e.g., 200 for success, 404 for not found). If not provided, a default code (often 200) might be used.
+- `statusCode` (optional): A numeric HTTP status code (e.g., 200 for success, 404 for not found). If not provided, a default status code might be used.
 
 **Usage notes**
 
@@ -135,17 +127,17 @@ class MyResponseGenerator implements ResponseGenerator {
   reply(response, body, statusCode) {
     response.setHeader('Content-Type', 'application/json');
     if (statusCode) {
-      response.end(JSON.stringify({ message: "Hello from the server!", status: statusCode }));
+      response.end(
+        JSON.stringify({
+          message: 'Hello from the server!',
+          status: statusCode,
+        }),
+      );
     } else {
-      response.end(JSON.stringify({ message: "Hello from the server!" }));
+      response.end(JSON.stringify({ message: 'Hello from the server!' }));
     }
   }
 }
-
-// Usage:
-const response = /* response object */;
-const generator = new MyResponseGenerator();
-generator.reply(response, { data: "Some data to send" }, 201); // Send a 201 Created response
 ```
 
 ## License
