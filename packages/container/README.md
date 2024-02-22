@@ -76,7 +76,7 @@ Checks whether an entry for a specific provider token exists in the container.
 
 _Parameters_
 
-`token`: The unique identifier of the entry to check for.
+- `token`: The unique identifier of the entry to check for.
 
 _Returns_
 
