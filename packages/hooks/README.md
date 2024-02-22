@@ -20,7 +20,7 @@ yarn add @armscye/hooks --dev
 
 ### ShutdownHook `Interface`
 
-Interface defining methods to respond to system signals (when application gets shutdown by, e.g., `SIGTERM`).
+Interface defining method to respond to system signals (when application gets shutdown by, e.g., `SIGTERM`).
 
 ```ts
 interface ShutdownHook {
@@ -46,9 +46,6 @@ class MyShutdownHook implements ShutdownHook {
       .catch(error => console.error("Error closing database:", error));
   }
 }
-
-// Register the shutdown hook with the application
-app.registerHook(new MyShutdownHook())
 ```
 
 ### StartupHook `Interface`
@@ -75,9 +72,6 @@ class MyStartupHook implements StartupHook {
     console.log('Database connection established.');
   }
 }
-
-// Register the startup hook with the application
-app.registerHook(new MyStartupHook());
 ```
 
 ### HookProvider `Type`

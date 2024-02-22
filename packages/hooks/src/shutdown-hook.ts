@@ -1,5 +1,5 @@
 /**
- * Interface defining methods to respond to system signals (when application gets
+ * Interface defining method to respond to system signals (when application gets
  * shutdown by, e.g., `SIGTERM`).
  */
 export interface ShutdownHook {
