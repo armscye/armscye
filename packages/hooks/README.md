@@ -76,10 +76,10 @@ class MyStartupHook implements StartupHook {
 
 ### HookProvider `Type`
 
-Describes how hooks should be provided.
+Describes type structure for hooks.
 
 ```ts
-type HookProvider<T = any> = string | symbol | object | Type<T> | Function;
+type HookProvider = string | symbol | object | Type<any> | Function;
 ```
 
 ## License
