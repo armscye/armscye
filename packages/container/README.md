@@ -23,10 +23,10 @@ yarn add @armscye/container --dev
 Configures the `Container` to return an instance of `useClass` for a token.
 
 ```ts
-interface ClassProvider<T = any> {
+interface ClassProvider {
   provide: ProviderToken;
 
-  useClass: NoArgument<T>;
+  useClass: NoArgument<any>;
 
   shared?: boolean;
 }
@@ -34,11 +34,11 @@ interface ClassProvider<T = any> {
 
 **Properties**
 
-| Property                  | Description                                |
-| ------------------------- | ------------------------------------------ |
-| provide: `ProviderToken`  | A provider token.                          |
-| useClass: `NoArgument<T>` | A class to instantiate for the `token`.    |
-| shared?: boolean          | When true, the created instance is cached. |
+| Property                    | Description                                |
+| --------------------------- | ------------------------------------------ |
+| provide: `ProviderToken`    | A provider token.                          |
+| useClass: `NoArgument<any>` | A class to instantiate for the `token`.    |
+| shared?: boolean            | When true, the created instance is cached. |
 
 ### Container `Interface`
 
@@ -109,10 +109,10 @@ interface ExistingProvider {
 Configures the `Container` to return a value by invoking a `useFactory` function.
 
 ```ts
-interface FactoryProvider<T = any> {
+interface FactoryProvider {
   provide: ProviderToken;
 
-  useFactory: Factory<T>;
+  useFactory: Factory<any>;
 
   shared?: boolean;
 }
@@ -120,11 +120,11 @@ interface FactoryProvider<T = any> {
 
 **Properties**
 
-| Property                 | Description                                                       |
-| ------------------------ | ----------------------------------------------------------------- |
-| provide: `ProviderToken` | A provider token.                                                 |
-| useFactory: `Factory<T>` | A factory function to invoke to create an object for the `token`. |
-| shared?: boolean         | When true, the created instance is cached.                        |
+| Property                   | Description                                                       |
+| -------------------------- | ----------------------------------------------------------------- |
+| provide: `ProviderToken`   | A provider token.                                                 |
+| useFactory: `Factory<any>` | A factory function to invoke to create an object for the `token`. |
+| shared?: boolean           | When true, the created instance is cached.                        |
 
 ### Factory `Type`
 
@@ -147,11 +147,11 @@ type ProviderToken = string | symbol;
 Describes how the `Container` should be configured.
 
 ```ts
-type Provider<T = any> =
-  | ValueProvider<T>
-  | ClassProvider<T>
-  | FactoryProvider<T>
-  | ExistingProvider<T>;
+type Provider =
+  | ValueProvider
+  | ClassProvider
+  | FactoryProvider
+  | ExistingProvider;
 ```
 
 ### ValueProvider `Interface`
@@ -159,10 +159,10 @@ type Provider<T = any> =
 Configures the `Container` to return a value for a token.
 
 ```ts
-interface ValueProvider<T = any> {
+interface ValueProvider {
   provide: ProviderToken;
 
-  useValue: T;
+  useValue: any;
 }
 ```
 
@@ -171,7 +171,7 @@ interface ValueProvider<T = any> {
 | Property                 | Description                                                 |
 | ------------------------ | ----------------------------------------------------------- |
 | provide: `ProviderToken` | A provider token.                                           |
-| useValue: T              | The actual value that will be provided for the given token. |
+| useValue: any            | The actual value that will be provided for the given token. |
 
 ## License
 

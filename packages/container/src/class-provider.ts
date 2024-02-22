@@ -4,7 +4,7 @@ import { ProviderToken } from './provider-token';
 /**
  * Configures the `Container` to return a value by instantiating `useClass` class.
  */
-export interface ClassProvider<T = any> {
+export interface ClassProvider {
   /**
    * Provider token.
    */
@@ -13,7 +13,7 @@ export interface ClassProvider<T = any> {
   /**
    * Class to instantiate for the `token`.
    */
-  useClass: NoArgument<T>;
+  useClass: NoArgument<any>;
 
   /**
    * Whether the created instance should be cached.
