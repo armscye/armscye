@@ -3,7 +3,7 @@ import { ProviderToken } from './provider-token';
 /**
  * Configures the `Container` to return a value of another `useExisting` token.
  */
-export interface ExistingProvider<T = any> {
+export interface ExistingProvider {
   /**
    * Provider token.
    */
@@ -12,7 +12,7 @@ export interface ExistingProvider<T = any> {
   /**
    * Existing `token` to return.
    */
-  useExisting: T;
+  useExisting: ProviderToken;
 
   /**
    * Whether the created instance should be cached.

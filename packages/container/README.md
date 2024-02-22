@@ -87,10 +87,10 @@ _Returns_
 Configures the `Container` to return a value of another `useExisting` token.
 
 ```ts
-interface ExistingProvider<T = any> {
+interface ExistingProvider {
   provide: ProviderToken;
 
-  useExisting: T;
+  useExisting: ProviderToken;
 
   shared?: boolean;
 }
