@@ -20,7 +20,7 @@ yarn add @armscye/module --dev
 
 ### Module `Interface`
 
-Provides a standardized way to register configurations and integrate with the larger system.
+Provides a standardized way to register module configurations and integrate with the larger system.
 
 ```ts
 interface Module {
@@ -31,7 +31,7 @@ interface Module {
 }
 ```
 
-The `register` method is the heart of the `Module`. It's responsible for registering any required configurations, settings, or dependencies necessary for the module to function correctly.
+The `register` method is a key part of the `Module` interface. It's responsible for registering configurations such as dependencies.
 
 **Usage notes**
 
@@ -45,9 +45,6 @@ class MyModule implements Module {
     ];
   }
 }
-
-// Register the module with the application
-app.registerModule(new MyModule());
 ```
 
 ## License
