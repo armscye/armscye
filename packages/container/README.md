@@ -54,7 +54,7 @@ interface Container {
 
 **Methods**
 
-#### `get(token: ProviderToken): T`
+#### `get<T>(token: ProviderToken): T`
 
 Retrieves an entry from the container based on its provider token.
 
