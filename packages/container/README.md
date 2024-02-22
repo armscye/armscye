@@ -34,11 +34,11 @@ interface ClassProvider<T = any> {
 
 **Properties**
 
-| Property                  | Description                                |
-| ------------------------- | ------------------------------------------ |
-| provide: ProviderToken    | A provider token.                          |
-| useClass: NoArgument<any> | A class to instantiate for the `token`.    |
-| shared?: boolean          | When true, the created instance is cached. |
+| Property                | Description                                |
+| ----------------------- | ------------------------------------------ |
+| provide: ProviderToken  | A provider token.                          |
+| useClass: NoArgument<T> | A class to instantiate for the `token`.    |
+| shared?: boolean        | When true, the created instance is cached. |
 
 ### Container `Interface`
 
@@ -54,7 +54,7 @@ interface Container {
 
 **Methods**
 
-    get(token: ProviderToken): T
+#### `get(token: ProviderToken): T`
 
 Retrieves an entry from the container based on its provider token.
 
@@ -70,7 +70,7 @@ _Throws_
 
 `Error` if the entry doesn't exist or an error occurs during retrieval.
 
-    has(token: ProviderToken): boolean
+#### `has(token: ProviderToken): boolean`
 
 Checks whether an entry for a specific provider token exists in the container.
 
@@ -123,7 +123,7 @@ interface FactoryProvider<T = any> {
 | Property               | Description                                                       |
 | ---------------------- | ----------------------------------------------------------------- |
 | provide: ProviderToken | A provider token.                                                 |
-| useFactory: Factory    | A factory function to invoke to create an object for the `token`. |
+| useFactory: Factory<T> | A factory function to invoke to create an object for the `token`. |
 | shared?: boolean       | When true, the created instance is cached.                        |
 
 ### Factory `Type`
@@ -171,7 +171,7 @@ interface ValueProvider<T = any> {
 | Property               | Description                                                 |
 | ---------------------- | ----------------------------------------------------------- |
 | provide: ProviderToken | A provider token.                                           |
-| useValue: any          | The actual value that will be provided for the given token. |
+| useValue: T            | The actual value that will be provided for the given token. |
 
 ## License
 
