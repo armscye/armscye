@@ -6,7 +6,6 @@
 
 - [core](./packages/core)
 - [container](./packages/container)
-- [express](./packages/express)
 - [handler](./packages/handler)
 - [hooks](./packages/hooks)
 - [logging](./packages/logging)
