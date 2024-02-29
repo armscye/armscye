@@ -10,6 +10,7 @@
 - [handler](./packages/handler)
 - [hooks](./packages/hooks)
 - [logging](./packages/logging)
+- [middleware](./packages/middleware)
 - [module](./packages/module)
 
 ## :memo: License
