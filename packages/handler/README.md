@@ -20,7 +20,7 @@ yarn add @armscye/handler --dev
 
 ### NotchHandler `Interface`
 
-Handles a server request and produces a response.
+This interface defines how to handle a server request and generate a corresponding response.
 
 ```ts
 interface NotchHandler<TRequest = any, TResponse = any> {
@@ -28,11 +28,11 @@ interface NotchHandler<TRequest = any, TResponse = any> {
 }
 ```
 
-The `handle` method is the heart of the `NotchHandler`. It takes three arguments:
+The `handle` method is the core of the `NotchHandler` interface. It takes three arguments:
 
-- `req`: This represents the incoming HTTP request.
-- `res`: This represents the response object that will be sent back to the client.
-- `next` (optional): Allows the handler to delegate further processing to the next middleware in the chain if necessary.
+- `req`: The incoming HTTP request object.
+- `res`: The response object to be sent back to the client.
+- `next` (optional): A function to pass control to the next middleware in the chain, if applicable.
 
 **Usage notes**
 
