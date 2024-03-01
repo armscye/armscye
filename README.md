@@ -8,6 +8,7 @@
 - [container](./packages/container)
 - [handler](./packages/handler)
 - [hooks](./packages/hooks)
+- [http](./packages/http)
 - [logging](./packages/logging)
 - [middleware](./packages/middleware)
 - [module](./packages/module)
