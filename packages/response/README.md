@@ -20,7 +20,7 @@ yarn add @armscye/response --dev
 
 ### ResponseGenerator `Interface`
 
-Describes the interface for composing and sending HTTP responses.
+Provides a contract for composing and sending HTTP responses.
 
 ```ts
 interface ResponseGenerator {
@@ -28,7 +28,7 @@ interface ResponseGenerator {
 }
 ```
 
-The `reply` method within the `ResponseGenerator` is responsible for the final step in crafting and delivering an HTTP response to the client. The method takes three arguments:
+The `reply` method within the `ResponseGenerator` interface is responsible for the final step in crafting and delivering an HTTP response to the client. The method takes three arguments:
 
 - `response`: An object representing the in-flight response.
 - `body`: The actual content of the response, which can be:
