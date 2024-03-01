@@ -29,11 +29,11 @@ interface NotchMiddleware<TRequest = any, TResponse = any> {
 }
 ```
 
-The `process` method in the `NotchMiddleware` is responsible for handling incoming server requests and participating in the overall request-response cycle. The method takes three main arguments:
+The `process` method is central to the `NotchMiddleware` interface.It handles incoming requests and contributes to the request-response cycle. The method takes three main arguments:
 
-- `req`: This represents the incoming HTTP request.
-- `res`: This represents the response object that will be sent back to the client.
-- `next` (optional): Allows passing control to the next middleware in a chain or to the final request handler.
+- `req`: The incoming HTTP request object.
+- `res`: The response object to be sent back to the client.
+- `next` (optional): A function to pass control to the next middleware in the chain or the final request handler.
 
 Some middleware implementations might also handle errors. They receive an additional `err` argument before the `req`, `res`, and `next` arguments. This allows them to:
 
