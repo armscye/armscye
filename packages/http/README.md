@@ -23,29 +23,25 @@ yarn add @armscye/http --dev
 The `HttpAdapter` interface provides a standardized way to interact with different HTTP server implementations within a web application. It abstracts away the details of specific frameworks (like Express, Fastify, etc.), enabling the creation of framework-independent code that interacts with the underlying HTTP server.
 
 ```ts
-interface HttpAdapter<TServer = any> {
-  getInstance<T = any>(): T;
+interface HttpAdapter {
+  getInstance(): any;
 
-  getHttpServer(): TServer;
+  getHttpServer(): any;
 
-  getType(): string;
+  getName(): string;
 
-  listen(port: number | string, callback?: () => void): Promise<any>;
-  listen(
-    port: number | string,
-    hostname: string,
-    callback?: () => void,
-  ): Promise<any>;
+  listen(port: number | string, callback?: () => void): any;
+  listen(port: number | string, hostname: string, callback?: () => void): any;
 
   initHttpServer(): void;
 
-  close(): Promise<any>;
+  close(): any;
 }
 ```
 
 **Methods**
 
-#### `getInstance<T = any>()`
+#### `getInstance()`
 
 Retrieves the underlying HTTP server application instance, such as an Express or Fastify application.
 
@@ -57,7 +53,7 @@ Retrieves the native HTTP server object managed by the framework (e.g., Node.js'
 
 Returns the name of the adapter ("Express", "Fastify", etc.), useful for debugging or identifying which specific adapter is in use.
 
-#### `listen(port, [hostname], [callback]): Promise<any>`
+#### `listen(port, [hostname], [callback])`
 
 Starts the HTTP server and begins listening for incoming connections on the specified port.
 
@@ -69,13 +65,13 @@ _Parameters_
 
 _Returns_
 
-A Promise that resolves to the underlying HTTP server instance once the server is listening.
+An HTTP server object.
 
 #### `initHttpServer()`
 
 Performs any internal setup or initialization required by the adapter to prepare the HTTP server for handling requests.
 
-#### `close() : Promise<any>`
+#### `close()`
 
 Signals the server to stop accepting new connections, allowing existing connections to complete.
 
