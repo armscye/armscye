@@ -28,7 +28,7 @@ interface Logger {
 
   info(msg: any, ...args: unknown[]): any;
 
-  warn(msg: any, ...args: unknown[]): any;
+  warning(msg: any, ...args: unknown[]): any;
 
   error(msg: any, ...args: unknown[]): any;
 
@@ -42,7 +42,7 @@ The interface offers various methods for logging messages at different levels of
 
 - `debug`: Log a message at the DEBUG level.
 - `info`: Log a message at the INFO level.
-- `warn`: Log a message at the WARN level.
+- `warning`: Log a message at the WARNING level.
 - `error`: Log a message at the ERROR level.
 - `critical`: Log a message at the CRITICAL level.
 

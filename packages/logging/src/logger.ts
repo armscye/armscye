@@ -19,12 +19,12 @@ export interface Logger {
   info(msg: any, ...args: unknown[]): any;
 
   /**
-   * Log a message at the WARN level.
+   * Log a message at the WARNING level.
    *
    * @param msg the message to be logged
    * @param args an array of arguments
    */
-  warn(msg: any, ...args: unknown[]): any;
+  warning(msg: any, ...args: unknown[]): any;
 
   /**
    * Log a message at the ERROR level.
