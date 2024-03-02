@@ -14,11 +14,11 @@ export interface HttpAdapter<TServer = any> {
   getHttpServer(): TServer;
 
   /**
-   * Retrieves the adapter's registered type name.
+   * Retrieves the adapter's name (for identification).
    *
-   * @returns The adapter's type name (e.g., 'express').
+   * @returns The adapter's name (e.g., 'Express').
    */
-  getType(): string;
+  getName(): string;
 
   /**
    * Starts the server, enabling it to accept connections.

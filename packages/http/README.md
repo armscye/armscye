@@ -53,9 +53,9 @@ Retrieves the underlying HTTP server application instance, such as an Express or
 
 Retrieves the native HTTP server object managed by the framework (e.g., Node.js's `http.Server` object).
 
-#### `getType()`
+#### `getName()`
 
-Retrieves the registered type name of the adapter ("express", "fastify", etc.).
+Returns the name of the adapter ("Express", "Fastify", etc.), useful for debugging or identifying which specific adapter is in use.
 
 #### `listen(port, [hostname], [callback]): Promise<any>`
 
