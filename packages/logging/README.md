@@ -24,15 +24,15 @@ Describes a common interface for logging.
 
 ```ts
 interface Logger {
+  trace(msg: any, ...args: unknown[]): any;
+
   debug(msg: any, ...args: unknown[]): any;
 
   info(msg: any, ...args: unknown[]): any;
 
-  warning(msg: any, ...args: unknown[]): any;
+  warn(msg: any, ...args: unknown[]): any;
 
   error(msg: any, ...args: unknown[]): any;
-
-  critical(msg: any, ...args: unknown[]): any;
 
   getLogger(name: string): this;
 }
@@ -40,11 +40,11 @@ interface Logger {
 
 The interface offers various methods for logging messages at different levels of severity:
 
+- `trace`: Log a message at the TRACE level.
 - `debug`: Log a message at the DEBUG level.
 - `info`: Log a message at the INFO level.
-- `warning`: Log a message at the WARNING level.
+- `warn`: Log a message at the WARN level.
 - `error`: Log a message at the ERROR level.
-- `critical`: Log a message at the CRITICAL level.
 
 Each method takes the message, usually a string, as the first argument and allows additional arguments for providing context (variables, objects, etc.).
 

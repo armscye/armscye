@@ -3,6 +3,14 @@
  */
 export interface Logger {
   /**
+   * Log a message at the TRACE level.
+   *
+   * @param msg the message to be logged
+   * @param args an array of arguments
+   */
+  trace(msg: any, ...args: unknown[]): any;
+
+  /**
    * Log a message at the DEBUG level.
    *
    * @param msg the message to be logged
@@ -19,12 +27,12 @@ export interface Logger {
   info(msg: any, ...args: unknown[]): any;
 
   /**
-   * Log a message at the WARNING level.
+   * Log a message at the WARN level.
    *
    * @param msg the message to be logged
    * @param args an array of arguments
    */
-  warning(msg: any, ...args: unknown[]): any;
+  warn(msg: any, ...args: unknown[]): any;
 
   /**
    * Log a message at the ERROR level.
@@ -33,14 +41,6 @@ export interface Logger {
    * @param args an array of arguments
    */
   error(msg: any, ...args: unknown[]): any;
-
-  /**
-   * Log a message at the CRITICAL level.
-   *
-   * @param msg the message to be logged
-   * @param args an array of arguments
-   */
-  critical(msg: any, ...args: unknown[]): any;
 
   /**
    * Return a named logger.
