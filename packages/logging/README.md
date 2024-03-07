@@ -34,7 +34,7 @@ interface Logger {
 
   error(msg: any, ...args: unknown[]): any;
 
-  getLogger(name: string): this;
+  getLogger(context: any): Logger;
 }
 ```
 
@@ -48,7 +48,7 @@ The interface offers various methods for logging messages at different levels of
 
 Each method takes the message, usually a string, as the first argument and allows additional arguments for providing context (variables, objects, etc.).
 
-The `getLogger` method facilitates creation of loggers with specific names. This helps organize and filter log messages based on their origin or functionality.
+The `getLogger` method facilitates creation of loggers with specific context. This helps organize and filter log messages based on their origin or functionality.
 
 **Usage notes**
 
