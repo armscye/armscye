@@ -43,9 +43,9 @@ export interface Logger {
   error(msg: any, ...args: unknown[]): any;
 
   /**
-   * Return a `Logger` instance for the specified context.
+   * Return a named logger.
    *
-   * @param context the context of the logger
+   * @param name the name of the logger
    */
-  getLogger(context: any): Logger;
+  getLogger(name: string): Logger;
 }
