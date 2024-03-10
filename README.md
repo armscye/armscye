@@ -8,7 +8,6 @@
 - [container](./packages/container)
 - [hooks](./packages/hooks)
 - [logging](./packages/logging)
-- [middleware](./packages/middleware)
 - [module](./packages/module)
 - [response](./packages/response)
 
