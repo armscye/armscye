@@ -7,7 +7,6 @@
 - [core](./packages/core)
 - [container](./packages/container)
 - [hooks](./packages/hooks)
-- [http](./packages/http)
 - [logging](./packages/logging)
 - [middleware](./packages/middleware)
 - [module](./packages/module)

@@ -11,9 +11,6 @@
       "path": "./hooks/tsconfig.build.json"
     },
     {
-      "path": "./http/tsconfig.build.json"
-    },
-    {
       "path": "./logging/tsconfig.build.json"
     },
     {
