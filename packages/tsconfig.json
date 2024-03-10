@@ -15,9 +15,6 @@
     },
     {
       "path": "./module/tsconfig.build.json"
-    },
-    {
-      "path": "./response/tsconfig.build.json"
     }
   ]
 }

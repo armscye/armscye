@@ -9,7 +9,6 @@
 - [hooks](./packages/hooks)
 - [logging](./packages/logging)
 - [module](./packages/module)
-- [response](./packages/response)
 
 ## :memo: License
 
