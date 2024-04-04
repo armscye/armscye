@@ -33,8 +33,6 @@ interface Logger {
   warn(msg: any, ...args: unknown[]): any;
 
   error(msg: any, ...args: unknown[]): any;
-
-  getLogger(name: string): Logger;
 }
 ```
 
@@ -48,8 +46,6 @@ The interface offers various methods for logging messages at different levels of
 
 Each method takes the message, usually a string, as the first argument and allows additional arguments for providing context (variables, objects, etc.).
 
-The `getLogger` method facilitates creation of loggers with specific names. This helps organize and filter log messages based on their origin or functionality.
-
 **Usage notes**
 
 Here's an example demonstrating how to use the `Logger` interface:
@@ -57,7 +53,7 @@ Here's an example demonstrating how to use the `Logger` interface:
 ```ts
 class MyLogger implements Logger {}
 
-const logger = new MyLogger().getLogger('my-service');
+const logger = new MyLogger();
 
 logger.info('Starting service processing...');
 

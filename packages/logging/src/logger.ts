@@ -41,11 +41,4 @@ export interface Logger {
    * @param args an array of arguments
    */
   error(msg: any, ...args: unknown[]): any;
-
-  /**
-   * Return a named logger.
-   *
-   * @param name the name of the logger
-   */
-  getLogger(name: string): Logger;
 }
