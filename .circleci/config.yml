@@ -25,7 +25,7 @@ jobs:
   build:
     working_directory: ~/armscye
     docker:
-      - image: cimg/node:21.7
+      - image: cimg/node:22.2
     steps:
       - checkout
       - *restore-cache
