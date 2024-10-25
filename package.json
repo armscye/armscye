@@ -21,22 +21,26 @@
     "prepublish:npm": "yarn build",
     "publish:npm": "lerna publish",
     "prepublish:next": "yarn build",
-    "publish:next": "lerna publish --dist-tag next"
+    "publish:next": "lerna publish --dist-tag next",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
+    "@eslint/js": "^9.13.0",
     "@types/node": "20.17.0",
     "@typescript-eslint/eslint-plugin": "8.11.0",
     "@typescript-eslint/parser": "8.11.0",
     "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "husky": "9.1.6",
     "lerna": "8.1.8",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
-    "typescript": "5.6.3"
+    "typescript": "5.6.3",
+    "typescript-eslint": "^8.11.0"
   },
   "homepage": "https://github.com/armscye/armscye#readme",
   "bugs": {
