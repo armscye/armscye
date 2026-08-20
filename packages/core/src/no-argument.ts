@@ -1,6 +1,6 @@
 /**
- * Represents an instantiable class `T` with a default (no-argument) constructor.
+ * Represents a constructable class `T` with a no-argument constructor.
  */
-export interface NoArgument<T = any> extends Function {
+export interface NoArgConstructor<T = unknown> extends Function {
   new (): T;
 }
