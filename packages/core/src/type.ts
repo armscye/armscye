@@ -1,6 +1,6 @@
 /**
- * Represents an instantiable class `T` with constructor parameters.
+ * Represents a constructable class that creates instances of `T`.
  */
-export interface Type<T = any> extends Function {
+export interface Type<T = unknown> extends Function {
   new (...args: any[]): T;
 }
