@@ -1,7 +1,6 @@
 /**
- * Represents an abstract class `T`, if applied to a concrete class it would stop being
- * instantiable.
+ * Represents an abstract class constructor that creates instances of `T`.
  */
-export interface Abstract<T = any> extends Function {
+export interface Abstract<T = unknown> extends Function {
   prototype: T;
 }
