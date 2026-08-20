@@ -1,3 +1,3 @@
 export * from './abstract';
-export * from './no-argumen';
+export * from './no-argument';
 export * from './type';
