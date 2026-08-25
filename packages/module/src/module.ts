@@ -1,6 +1,6 @@
 export interface Module {
   /**
-   * Register configurations with the application.
+   * Register configurations.
    */
   register(): any;
 }
