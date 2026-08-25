@@ -1,12 +1,11 @@
 /**
- * Interface defining method to respond to system signals (when application gets
- * shutdown by, e.g., `SIGTERM`).
+ * Defines a hook that runs when the application is shutting down.
  */
 export interface ShutdownHook {
   /**
-   * Called after connections close.
+   * Called during application shutdown.
    *
-   * @param signal the system signal
+   * @param signal The system signal that triggered the shutdown, if available.
    */
   onShutdown(signal?: string): any;
 }

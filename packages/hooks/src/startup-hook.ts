@@ -1,9 +1,9 @@
 /**
- * Interface defining method called during the application startup.
+ * Defines a hook that runs during application startup.
  */
 export interface StartupHook {
   /**
-   * Called before listening for connections.
+   * Called when the application is starting.
    */
   onStartup(): any;
 }
