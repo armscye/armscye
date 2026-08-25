@@ -1,6 +1,6 @@
 {
   "name": "@armscye/core",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A collection of shared standard TypeScript definitions (@core)",
   "author": "Augustus Kamau",
   "license": "MIT",

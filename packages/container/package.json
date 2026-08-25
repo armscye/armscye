@@ -1,6 +1,6 @@
 {
   "name": "@armscye/container",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "A collection of shared standard TypeScript definitions (@container)",
   "author": "Augustus Kamau",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "container"
   ],
   "dependencies": {
-    "@armscye/core": "^0.4.1"
+    "@armscye/core": "^0.4.2"
   },
   "homepage": "https://github.com/armscye/armscye#readme",
   "repository": {
