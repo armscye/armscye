@@ -1,6 +1,6 @@
 {
   "name": "@armscye/hooks",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "A collection of shared standard TypeScript definitions (@hooks)",
   "author": "Augustus Kamau",
   "license": "MIT",
