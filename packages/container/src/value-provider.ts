@@ -3,7 +3,7 @@ import { ProviderToken } from './provider-token';
 /**
  * Configures the `Container` to return a value for a token.
  */
-export interface ValueProvider {
+export interface ValueProvider<T = any> {
   /**
    * Provider token.
    */
@@ -12,5 +12,5 @@ export interface ValueProvider {
   /**
    * The value to inject.
    */
-  useValue: any;
+  useValue: T;
 }
