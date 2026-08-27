@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.5.4...%40armscye%2Fcontainer%400.5.5) (2026-08-27)
+
+**Note:** Version bump only for package @armscye/container
+
 ## [0.5.4](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.5.3...%40armscye%2Fcontainer%400.5.4) (2026-08-27)
 
 **Note:** Version bump only for package @armscye/container
