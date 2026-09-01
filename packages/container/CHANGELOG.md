@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.5.6...%40armscye%2Fcontainer%400.6.0) (2026-09-01)
+
+### Features
+
+- **container:** replace shared property with lifetime ([93e7025](https://github.com/armscye/armscye/commit/93e70254c0e8e8b69df8e241dafa0c2ced43aecd))
+
 ## [0.5.6](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.5.5...%40armscye%2Fcontainer%400.5.6) (2026-09-01)
 
 **Note:** Version bump only for package @armscye/container
