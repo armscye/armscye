@@ -1,6 +1,6 @@
 {
   "name": "@armscye/container",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "A collection of shared standard TypeScript definitions (@container)",
   "author": "Augustus Kamau",
   "license": "MIT",
