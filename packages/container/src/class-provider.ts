@@ -1,5 +1,6 @@
 import { NoArgument } from '@armscye/core';
 import { ProviderToken } from './provider-token';
+import { Lifetime } from './lifetime';
 
 /**
  * Configures the `Container` to return an instance of `useClass` for a token.
@@ -16,7 +17,13 @@ export interface ClassProvider {
   useClass: NoArgument<any>;
 
   /**
-   * Whether the created instance should be cached.
-   */
+    /**
+     * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
+     */
   shared?: boolean;
+
+  /**
+   * The lifetime of the created instance.
+   */
+  lifetime?: Lifetime;
 }

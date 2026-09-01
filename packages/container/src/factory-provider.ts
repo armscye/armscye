@@ -1,4 +1,5 @@
 import { Factory } from './factory';
+import { Lifetime } from './lifetime';
 import { ProviderToken } from './provider-token';
 
 /**
@@ -17,7 +18,12 @@ export interface FactoryProvider {
   useFactory: Factory<any>;
 
   /**
-   * Whether the created instance should be cached.
+   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
    */
   shared?: boolean;
+
+  /**
+   * The lifetime of the created instance.
+   */
+  lifetime?: Lifetime;
 }

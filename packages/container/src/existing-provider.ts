@@ -1,3 +1,4 @@
+import { Lifetime } from './lifetime';
 import { ProviderToken } from './provider-token';
 
 /**
@@ -15,7 +16,12 @@ export interface ExistingProvider {
   useExisting: ProviderToken;
 
   /**
-   * Whether the created instance should be cached.
+   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
    */
   shared?: boolean;
+
+  /**
+   * The lifetime of the created instance.
+   */
+  lifetime?: Lifetime;
 }
