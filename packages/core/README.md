@@ -23,7 +23,7 @@ yarn add @armscye/core --dev
 Represents an abstract class constructor that creates instances of `T`.
 
 ```ts
-interface Abstract<T = any> extends Function {
+interface Abstract<T = unknown> extends Function {
   prototype: T;
 }
 ```
@@ -33,7 +33,7 @@ interface Abstract<T = any> extends Function {
 Represents a constructable class `T` with a no-argument constructor.
 
 ```ts
-interface NoArgument<T = any> extends Function {
+interface NoArgument<T = unknown> extends Function {
   new (): T;
 }
 ```
@@ -43,7 +43,7 @@ interface NoArgument<T = any> extends Function {
 Represents a constructable class that creates instances of `T`.
 
 ```ts
-interface Type<T = any> extends Function {
+interface Type<T = unknown> extends Function {
   new (...args: any[]): T;
 }
 ```
