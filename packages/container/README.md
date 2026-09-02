@@ -29,6 +29,8 @@ interface ClassProvider {
   useClass: NoArgument<any>;
 
   shared?: boolean;
+
+  lifetime?: Lifetime;
 }
 ```
 
@@ -39,6 +41,7 @@ interface ClassProvider {
 | provide: `ProviderToken`    | A provider token.                          |
 | useClass: `NoArgument<any>` | A class to instantiate for the `token`.    |
 | shared?: boolean            | When true, the created instance is cached. |
+| lifetime?: `Lifetime`       | The lifetime of the created instance.      |
 
 ### Container `Interface`
 
@@ -93,6 +96,8 @@ interface ExistingProvider {
   useExisting: ProviderToken;
 
   shared?: boolean;
+
+  lifetime?: Lifetime;
 }
 ```
 
@@ -103,6 +108,7 @@ interface ExistingProvider {
 | provide: `ProviderToken`     | A provider token.                          |
 | useExisting: `ProviderToken` | Existing `token` to return.                |
 | shared?: boolean             | When true, the created instance is cached. |
+| lifetime?: `Lifetime`        | The lifetime of the created instance.      |
 
 ### FactoryProvider `Interface`
 
@@ -115,6 +121,8 @@ interface FactoryProvider {
   useFactory: Factory<any>;
 
   shared?: boolean;
+
+  lifetime?: Lifetime;
 }
 ```
 
@@ -125,6 +133,7 @@ interface FactoryProvider {
 | provide: `ProviderToken`   | A provider token.                                                 |
 | useFactory: `Factory<any>` | A factory function to invoke to create an object for the `token`. |
 | shared?: boolean           | When true, the created instance is cached.                        |
+| lifetime?: `Lifetime`      | The lifetime of the created instance.                             |
 
 ### Factory `Type`
 
@@ -133,6 +142,21 @@ A function to invoke to create an object. The function is invoked with an instan
 ```ts
 type Factory<T = any> = (container: Container) => T;
 ```
+
+### Lifetime `Type`
+
+Determines whether a dependency instance is reused across resolutions or a new instance is created for each resolution.
+
+```ts
+type Lifetime = 'singleton' | 'transient';
+```
+
+**Options**
+
+| Option    | Description                                                                                  |
+| --------- | -------------------------------------------------------------------------------------------- |
+| singleton | The dependency is resolved once, cached, and the same instance is reused across resolutions. |
+| transient | A new dependency instance is created for each resolution.                                    |
 
 ### ProviderToken `Type`
 
@@ -148,10 +172,7 @@ Describes how the `Container` should be configured.
 
 ```ts
 type Provider =
-  | ValueProvider
-  | ClassProvider
-  | FactoryProvider
-  | ExistingProvider;
+  ValueProvider | ClassProvider | FactoryProvider | ExistingProvider;
 ```
 
 ### ValueProvider `Interface`
