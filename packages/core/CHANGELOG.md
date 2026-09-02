@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/armscye/armscye/compare/%40armscye%2Fcore%400.4.2...%40armscye%2Fcore%400.4.3) (2026-09-02)
+
+### Bug Fixes
+
+- **README:** update generic type defaults from 'any' to 'unknown' ([fca0d74](https://github.com/armscye/armscye/commit/fca0d74fc76c2bfc6ecf9b634b703f899bf10371))
+
 ## [0.4.2](https://github.com/armscye/armscye/compare/%40armscye%2Fcore%400.4.1...%40armscye%2Fcore%400.4.2) (2026-08-25)
 
 **Note:** Version bump only for package @armscye/core
