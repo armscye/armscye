@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.6.1...%40armscye%2Fcontainer%400.7.0) (2026-09-02)
+
+### Features
+
+- **README:** add lifetime property to provider interfaces ([fbff28f](https://github.com/armscye/armscye/commit/fbff28f69b9e1344f5c89d0ee85d2e9a48557ce6))
+
 ## [0.6.1](https://github.com/armscye/armscye/compare/%40armscye%2Fcontainer%400.6.0...%40armscye%2Fcontainer%400.6.1) (2026-09-02)
 
 **Note:** Version bump only for package @armscye/container
