@@ -24,7 +24,8 @@ export interface ClassProvider {
   shared?: boolean;
 
   /**
-   * The lifetime of the created instance.
+   * The lifetime of the created instance. Takes precedence over `shared`
+   * when both are set.
    */
   lifetime?: Lifetime;
 }
