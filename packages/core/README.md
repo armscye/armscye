@@ -20,7 +20,7 @@ yarn add @armscye/core --dev
 
 ### Abstract `Interface`
 
-Represents an abstract class constructor that creates instances of `T`.
+Represents a class, possibly abstract, whose instances are of type `T`. It cannot necessarily be constructed with `new`.
 
 ```ts
 interface Abstract<T = unknown> extends Function {
@@ -30,7 +30,7 @@ interface Abstract<T = unknown> extends Function {
 
 ### NoArgument `Interface`
 
-Represents a constructable class `T` with a no-argument constructor.
+Represents a class that can be constructed with no arguments to create instances of `T`.
 
 ```ts
 interface NoArgument<T = unknown> extends Function {
