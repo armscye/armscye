@@ -67,7 +67,7 @@ _Parameters_
 
 _Returns_
 
-The entry associated with the provided token, if found.
+The entry associated with the token.
 
 _Throws_
 
