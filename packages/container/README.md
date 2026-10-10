@@ -87,7 +87,7 @@ _Returns_
 
 ### ExistingProvider `Interface`
 
-Configures the `Container` to return a value of another `useExisting` token.
+Configures the `Container` to return a value of another `useExisting` token. An alias creates no instance; the lifetime of the resolved value is determined by the `useExisting` target.
 
 ```ts
 interface ExistingProvider {
@@ -103,12 +103,12 @@ interface ExistingProvider {
 
 **Properties**
 
-| Property                     | Description                                                                                                                                   |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| provide: `ProviderToken`     | A provider token.                                                                                                                             |
-| useExisting: `ProviderToken` | Existing `token` to return.                                                                                                                   |
-| shared?: boolean             | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
-| lifetime?: `Lifetime`        | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
+| Property                     | Description                                                                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| provide: `ProviderToken`     | A provider token.                                                                                                           |
+| useExisting: `ProviderToken` | Existing `token` to return.                                                                                                 |
+| shared?: boolean             | **Deprecated.** An alias creates no instance; the lifetime of the resolved value is determined by the `useExisting` target. |
+| lifetime?: `Lifetime`        | **Deprecated.** An alias creates no instance; the lifetime of the resolved value is determined by the `useExisting` target. |
 
 ### FactoryProvider `Interface`
 

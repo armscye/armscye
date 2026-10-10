@@ -3,6 +3,8 @@ import { ProviderToken } from './provider-token';
 
 /**
  * Configures the `Container` to return a value of another `useExisting` token.
+ * An alias creates no instance; the lifetime of the resolved value is
+ * determined by the `useExisting` target.
  */
 export interface ExistingProvider {
   /**
@@ -16,16 +18,18 @@ export interface ExistingProvider {
   useExisting: ProviderToken;
 
   /**
-   * Whether the created instance should be cached.
+   * Whether the resolved value should be cached.
    *
-   * @deprecated Use `lifetime` instead: `true` is equivalent to `'singleton'`
-   * and `false` to `'transient'`.
+   * @deprecated An alias creates no instance; the lifetime of the resolved
+   * value is determined by the `useExisting` target.
    */
   shared?: boolean;
 
   /**
-   * The lifetime of the created instance. Takes precedence over `shared`
-   * when both are set. When neither is set, the container's default applies.
+   * The lifetime of the resolved value.
+   *
+   * @deprecated An alias creates no instance; the lifetime of the resolved
+   * value is determined by the `useExisting` target.
    */
   lifetime?: Lifetime;
 }
