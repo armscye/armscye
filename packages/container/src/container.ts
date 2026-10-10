@@ -1,24 +1,24 @@
 import { ProviderToken } from './provider-token';
 
 /**
- * Describes the interface of a container that exposes methods to read its entries.
+ * Describes a container that exposes methods to read its entries.
  */
 export interface Container {
   /**
-   * Find an entry of the container based on the provided token.
+   * Retrieves an entry from the container by its provider token.
    *
    * @param token the provider token of the entry to look for
-   * @returns an entry from the container if defined
+   * @returns the entry associated with the token
    * @throws Error if no entry was found for the token
-   * @throws Error if error while retrieving the entry
+   * @throws Error if an error occurs while retrieving the entry
    */
   get<T>(token: ProviderToken): T;
 
   /**
-   * Check if an entry for the given provider token exists.
+   * Checks whether an entry exists for the given provider token.
    *
    * @param token the provider token of the entry to look for
-   * @returns whether an entry for the given provider exists
+   * @returns `true` if an entry exists for the token, `false` otherwise
    */
   has(token: ProviderToken): boolean;
 }

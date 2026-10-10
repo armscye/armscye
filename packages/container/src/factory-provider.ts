@@ -12,13 +12,15 @@ export interface FactoryProvider {
   provide: ProviderToken;
 
   /**
-   * A function to invoke to create an instance for this `token`. The function is
-   * invoked with resolved values of `token`s from an instance of the container.
+   * A function to invoke to create a value for the token. The function is
+   * invoked with the container, from which it can resolve its dependencies.
    */
   useFactory: Factory<any>;
 
   /**
-   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
+   * Whether the created instance should be cached.
+   *
+   * @deprecated Use `lifetime` instead.
    */
   shared?: boolean;
 

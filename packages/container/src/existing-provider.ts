@@ -11,12 +11,14 @@ export interface ExistingProvider {
   provide: ProviderToken;
 
   /**
-   * Existing `token` to return.
+   * Token of the existing entry to return.
    */
   useExisting: ProviderToken;
 
   /**
-   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
+   * Whether the created instance should be cached.
+   *
+   * @deprecated Use `lifetime` instead.
    */
   shared?: boolean;
 

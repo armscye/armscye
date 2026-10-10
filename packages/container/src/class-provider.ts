@@ -12,12 +12,14 @@ export interface ClassProvider {
   provide: ProviderToken;
 
   /**
-   * Class to instantiate for the `token`.
+   * Class to instantiate for the token.
    */
   useClass: NoArgument<any>;
 
   /**
-   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
+   * Whether the created instance should be cached.
+   *
+   * @deprecated Use `lifetime` instead.
    */
   shared?: boolean;
 
