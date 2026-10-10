@@ -59,7 +59,7 @@ interface Container {
 
 #### `get<T>(token: ProviderToken): T`
 
-Retrieves an entry from the container based on its provider token.
+Retrieves an entry from the container based on its provider token. The type parameter `T` is asserted by the caller; the container does not verify that the entry matches it.
 
 _Parameters_
 
