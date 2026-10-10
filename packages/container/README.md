@@ -39,13 +39,13 @@ interface ClassProvider {
 | Property                    | Description                                                                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | provide: `ProviderToken`    | A provider token.                                                                                                                             |
-| useClass: `NoArgument<any>` | A class to instantiate for the `token`.                                                                                                       |
+| useClass: `NoArgument<any>` | A class to instantiate for the token.                                                                                                         |
 | shared?: boolean            | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
 | lifetime?: `Lifetime`       | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
 
 ### Container `Interface`
 
-Describes the interface of a container that exposes methods to read its entries.
+Describes a container that exposes methods to read its entries.
 
 ```ts
 interface Container {
@@ -59,7 +59,7 @@ interface Container {
 
 #### `get<T>(token: ProviderToken): T`
 
-Retrieves an entry from the container based on its provider token. The type parameter `T` is asserted by the caller; the container does not verify that the entry matches it.
+Retrieves an entry from the container by its provider token. The type parameter `T` is asserted by the caller; the container does not verify that the entry matches it.
 
 _Parameters_
 
@@ -71,11 +71,11 @@ The entry associated with the provided token, if found.
 
 _Throws_
 
-`Error` if the entry doesn't exist or an error occurs during retrieval.
+`Error` if no entry was found for the token, or an error occurs while retrieving it.
 
 #### `has(token: ProviderToken): boolean`
 
-Checks whether an entry for a specific provider token exists in the container.
+Checks whether an entry exists for the given provider token.
 
 _Parameters_
 
@@ -106,7 +106,7 @@ interface ExistingProvider {
 | Property                     | Description                                                                                                                 |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | provide: `ProviderToken`     | A provider token.                                                                                                           |
-| useExisting: `ProviderToken` | Existing `token` to return.                                                                                                 |
+| useExisting: `ProviderToken` | Token of the existing entry to return.                                                                                      |
 | shared?: boolean             | **Deprecated.** An alias creates no instance; the lifetime of the resolved value is determined by the `useExisting` target. |
 | lifetime?: `Lifetime`        | **Deprecated.** An alias creates no instance; the lifetime of the resolved value is determined by the `useExisting` target. |
 
@@ -131,13 +131,13 @@ interface FactoryProvider {
 | Property                   | Description                                                                                                                                   |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | provide: `ProviderToken`   | A provider token.                                                                                                                             |
-| useFactory: `Factory<any>` | A factory function to invoke to create an object for the `token`.                                                                             |
+| useFactory: `Factory<any>` | A function to invoke to create a value for the token. It is invoked with the container, from which it can resolve its dependencies.           |
 | shared?: boolean           | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
 | lifetime?: `Lifetime`      | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
 
 ### Factory `Type`
 
-A function to invoke to create an object. The function is invoked with an instance of the container in order to access required dependencies.
+A function that creates a value. It is invoked with the container, from which it can resolve the dependencies it requires.
 
 ```ts
 type Factory<T = any> = (container: Container) => T;

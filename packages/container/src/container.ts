@@ -11,8 +11,8 @@ export interface Container {
    *
    * @param token the provider token of the entry to look for
    * @returns the entry associated with the token
-   * @throws Error if no entry was found for the token
-   * @throws Error if an error occurs while retrieving the entry
+   * @throws {Error} if no entry was found for the token, or an error occurs
+   * while retrieving it
    */
   get<T>(token: ProviderToken): T;
 
