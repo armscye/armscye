@@ -17,9 +17,8 @@ export interface ClassProvider {
   useClass: NoArgument<any>;
 
   /**
-    /**
-     * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
-     */
+   * @deprecated Use `lifetime` instead. Whether the created instance should be cached.
+   */
   shared?: boolean;
 
   /**
