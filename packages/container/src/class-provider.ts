@@ -19,13 +19,14 @@ export interface ClassProvider {
   /**
    * Whether the created instance should be cached.
    *
-   * @deprecated Use `lifetime` instead.
+   * @deprecated Use `lifetime` instead: `true` is equivalent to `'singleton'`
+   * and `false` to `'transient'`.
    */
   shared?: boolean;
 
   /**
    * The lifetime of the created instance. Takes precedence over `shared`
-   * when both are set.
+   * when both are set. When neither is set, the container's default applies.
    */
   lifetime?: Lifetime;
 }

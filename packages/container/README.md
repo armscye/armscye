@@ -36,12 +36,12 @@ interface ClassProvider {
 
 **Properties**
 
-| Property                    | Description                                                                             |
-| --------------------------- | --------------------------------------------------------------------------------------- |
-| provide: `ProviderToken`    | A provider token.                                                                       |
-| useClass: `NoArgument<any>` | A class to instantiate for the `token`.                                                 |
-| shared?: boolean            | **Deprecated.** Use `lifetime` instead.                                                 |
-| lifetime?: `Lifetime`       | The lifetime of the created instance. Takes precedence over `shared` when both are set. |
+| Property                    | Description                                                                                                                                   |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| provide: `ProviderToken`    | A provider token.                                                                                                                             |
+| useClass: `NoArgument<any>` | A class to instantiate for the `token`.                                                                                                       |
+| shared?: boolean            | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
+| lifetime?: `Lifetime`       | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
 
 ### Container `Interface`
 
@@ -103,12 +103,12 @@ interface ExistingProvider {
 
 **Properties**
 
-| Property                     | Description                                                                             |
-| ---------------------------- | --------------------------------------------------------------------------------------- |
-| provide: `ProviderToken`     | A provider token.                                                                       |
-| useExisting: `ProviderToken` | Existing `token` to return.                                                             |
-| shared?: boolean             | **Deprecated.** Use `lifetime` instead.                                                 |
-| lifetime?: `Lifetime`        | The lifetime of the created instance. Takes precedence over `shared` when both are set. |
+| Property                     | Description                                                                                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| provide: `ProviderToken`     | A provider token.                                                                                                                             |
+| useExisting: `ProviderToken` | Existing `token` to return.                                                                                                                   |
+| shared?: boolean             | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
+| lifetime?: `Lifetime`        | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
 
 ### FactoryProvider `Interface`
 
@@ -128,12 +128,12 @@ interface FactoryProvider {
 
 **Properties**
 
-| Property                   | Description                                                                             |
-| -------------------------- | --------------------------------------------------------------------------------------- |
-| provide: `ProviderToken`   | A provider token.                                                                       |
-| useFactory: `Factory<any>` | A factory function to invoke to create an object for the `token`.                       |
-| shared?: boolean           | **Deprecated.** Use `lifetime` instead.                                                 |
-| lifetime?: `Lifetime`      | The lifetime of the created instance. Takes precedence over `shared` when both are set. |
+| Property                   | Description                                                                                                                                   |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| provide: `ProviderToken`   | A provider token.                                                                                                                             |
+| useFactory: `Factory<any>` | A factory function to invoke to create an object for the `token`.                                                                             |
+| shared?: boolean           | **Deprecated.** Use `lifetime` instead: `true` is equivalent to `'singleton'` and `false` to `'transient'`.                                   |
+| lifetime?: `Lifetime`      | The lifetime of the created instance. Takes precedence over `shared` when both are set. When neither is set, the container's default applies. |
 
 ### Factory `Type`
 
